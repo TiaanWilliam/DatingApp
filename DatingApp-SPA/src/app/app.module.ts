@@ -6,6 +6,7 @@ import { BsDropdownModule, TabsModule, BsDatepickerModule } from 'ngx-bootstrap'
 import { RouterModule } from '@angular/router';
 import { JwtModule } from '@auth0/angular-jwt';
 import { FileUploadModule } from 'ng2-file-upload';
+import {TimeAgoPipe} from 'time-ago-pipe';
 
 import { AppComponent } from './app.component';
 import { NavComponent } from './nav/nav.component';
@@ -43,6 +44,7 @@ export function tokenGetter() {
     MemberListComponent,
     ListsComponent,
     MessagesComponent,
+    TimeAgoPipe,
     MemberCardComponent,
     MemberDetailComponent,
     MemberEditComponent,
@@ -65,7 +67,7 @@ export function tokenGetter() {
     BsDropdownModule.forRoot(),
     RouterModule.forRoot(appRoutes),
     NgxGalleryModule,
-    FileUploadModule
+    FileUploadModule,
   ],
   providers: [
     AuthService,
